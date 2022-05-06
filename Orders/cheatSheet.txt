@@ -1,0 +1,291 @@
+ ----  PHP Cheat Sheet  (Class & Personal Notes)  ----
+
+
+About PHP 
+PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
+
+PHP code is executed on the server.
+A PHP script can be placed anywhere in the document.
+A PHP script starts with <?php and ends with ?>:
+<?php
+// your code goes here
+?>
+
+Comments in php is written using // before the comment you want to write
+
+There are three main areas where PHP scripts are used: 
+Server-side scripting - This is the most traditional and main target field for PHP. You need three things to make this work: the PHP parser (CGI or server module), a web server and a web browser. You need to run the web server, with a connected PHP installation. You can access the PHP program output with a web browser, viewing the PHP page through the server. All these can run on your home machine if you are just experimenting with PHP programming. See the installation instructions section for more information.
+
+Command line scripting - You can make a PHP script to run it without any server or browser. You only need the PHP parser to use it this way. This type of usage is ideal for scripts regularly executed using cron or Task Scheduler, on Windows. These scripts can also be used for simple text processing tasks. 
+
+Writing desktop applications - PHP is probably not the very best language to create a desktop application with a graphical user interface, but if you know PHP very well, and would like to use some advanced PHP features in your client-side applications you can also use PHP-GTK to write such programs. You also have the ability to write cross-platform applications this way. PHP-GTK is an extension to PHP, not available in the main distribution.
+
+One of the strongest and most significant features in PHP is its support for a wide range of databases. Writing a database-enabled web page is incredibly simple using one of the database specific extensions or using an abstraction layer like PDO, or connect to any database supporting the Open Database Connection standard via the ODBC extension. 
+
+-- x-- 
+
+Rules for PHP variables:
+
+A variable starts with the $ sign, followed by the name of the variable
+A variable name must start with a letter or the underscore character
+A variable name cannot start with a number
+A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+Variable names are case-sensitive ($age and $AGE are two different variables)
+
+-- x-- 
+
+With PHP, there are two basic ways to get output: echo and print.
+
+The differences are small: echo has no return value while print has a return value of 1 so it can be used in expressions.
+
+What is echo in php? 
+The echo statement can be used with or without parentheses: echo or echo(). 
+The echo is used to display the output of parameters that are passed to it.
+
+-- x-- 
+
+Rules for user defined functions in php :
+A function is a block of statements that can be used repeatedly in a program.
+A function will not execute automatically when a page loads.
+A function will be executed by a call to the function.
+
+-- x-- 
+
+Form Handling
+When the form is submitted, the form data is sent with method="post"
+When sending data to the server, it is often best to use the HTTP POST method.
+
+htmlspecialchars() :
+Converts special characters to HTML entities. It is used to encode user input on a website so that users cannot insert harmful HTML codes into a site.
+
+is_numeric() :
+is_numeric — Finds whether a variable is a number or a numeric string
+
+round() :
+The round() function rounds a floating-point number to its nearest integer.  Precision is an optional parameter which is used to set number of decimal digits to round to.
+
+mb_strpos(): 
+Finds position of the first occurrence of a string in a string.
+
+Difference between mb_strpos and strpos?
+strpos() looks for the byte sequence that is passed as the needle.
+mb_strpos() does the same thing but it also respects character boundaries.
+
+-- x-- 
+
+JSON 
+JSON stands for JavaScript Object Notation, and is a syntax for storing and exchanging data.
+Since the JSON format is a text-based format, it can easily be sent to and from a server, and used as a data format by any programming language.
+A common use of JSON is to read data from a web server, and display the data in a web page.
+PHP has some built-in functions to handle JSON.
+
+json_encode()
+Returns a string containing the JSON representation of the supplied value. Arrays in PHP can also be converted into JSON when using the PHP function json_encode().
+
+json_decode()
+Takes a JSON encoded string and converts it into a PHP variable.
+json_decode() function can also be used to decode a JSON object into a PHP object or an associative array. The json_decode() function has a second parameter, and when set to true, JSON objects are decoded into associative arrays.
+
+
+-- x --
+
+Feb 07 
+
+URL
+http://www.lasalle.com.
+Most imp part of URL? 
+A: server to which you communicate
+Why? 
+A: To prevent from hackers. https://www.google.ca.jf.hackers.com 
+
+For computer the URL is read from right to left.
+Google Chrome hides the address bar from users which can leave them vulnerable. We should always check the URL. 
+You can also pass parameters to a website in the same way you pass parameters in a function. 
+https://www.google.ca/search?q=ketchup&source=shdvWHGDHJBajhsDSbn 
+$_SERVER : who called the page 
+$_GET
+$_POST
+$_REQUEST  = $_GET or $_POST
+
+Diff between GET & POST
+
+POST: is a safer way | with post you can use more parameters | only coming from code. If using with some pwd or money etc you should use POST
+GET: short number of parameters. If using for getting I/p form user then use GET  
+
+Everything is remembered in the browser history If you use a GET but anything with POST is not remembered in the browsers history. 
+https://www.google.ca/search?q=ketchup
+
+
+PHP GET method
+This is the built in PHP super global array variable that is used to get values submitted via HTTP GET method.
+The array variable can be accessed from any script in the program; it has a global scope.
+This method displays the form values in the URL.
+It’s ideal for search engine forms as it allows the users to book mark the results.
+
+PHP POST method
+This is the built in PHP super global array variable that is used to get values submitted via HTTP POST method.
+The array variable can be accessed from any script in the program; it has a global scope.
+This method is ideal when you do not want to display the form post values in the URL.
+A good example of using post method is when submitting login details to the server.
+
+
+Project related : 
+1. Write clear commit message 
+2. At the top of each file write your name, date, revision history  [only main changes --> example: created css , created button, changed xyz, fixed error , added functionality....]
+3.  Lots of comments
+4. Use folders for CSS, JS, PHP, 
+
+---x---
+
+Feb 11 
+
+Get method is always saved in the browser history, 
+For all forms in project always use POST. 
+Apache is only concerned about the htdocs folder in out computer so every project you create should also have a copy in the htdocs folder so that Apache can access it.
+
+You send all the network headers before doctype html
+HTML and XHTML : XHTML is more strict and forces you to use perfect code. 
+
+You hit shift and refresh then the browser checks the latest version of the code
+
+Div and Span difference : 
+Div: default display is block 
+Span : default display is inline
+
+-- x -- 
+
+define()
+Defines a named constant at runtime.
+constant_name : The name of the constant.
+value : The value of the constant. 
+
+-- x-- 
+include_once()
+The include_once keyword is used to embed PHP code from another file. If the file is not found, a warning is shown and the program continues to run. If the file was already included previously, this statement will not include it again.
+
+-- x-- 
+
+date()
+The PHP date() function formats a timestamp to a more readable date and time.
+
+-- x-- 
+
+What Is Caching?
+Websites are generally viewed hundreds, thousands, or sometimes even millions of times per month. Normally, each time a browser requests a web page, the server has to do a bunch of complex (and time consuming) calculations. It retrieves the latest posts, generates the header and footer, finds your site’s sidebar widgets, and so on. However, in many cases, the result of all these calculations will be exactly the same.
+When you visit a website, you don’t just need to retrieve the content of the page you’re seeing you also need a bunch of resources such as Javascript files, stylesheets, fonts and so on, which your browser downloads in addition to the content of the page.
+To shorten page load times, browsers cache most of the content that appears on the webpage, saving a copy of the webpage's content on the device's hard drive. This way, the next time the user loads the page, most of the content is already stored locally and the page will load much more quickly.
+
+-- x-- 
+
+What is isset() Function
+The isset() function checks whether a variable is set, which means that it has to be declared and is not NULL. This function returns true if the variable exists and is not NULL, otherwise it returns false.
+
+
+-- x-- 
+
+PHP file open/read/write/close 
+
+Filesize()
+The filesize() function in PHP is an inbuilt function which is used to return the size of a specified file. The filesize() function accepts the filename as a parameter and returns the size of a file in bytes on success and False on failure.
+
+file_exists()
+The file_exists() function checks whether a file or directory exists.
+
+feof()
+The feof() function checks if the "end-of-file" (EOF) has been reached for an open file.
+
+fopen()
+fopen() binds a named resource, specified by filename, to a stream.
+
+Files can be opened in any of the following modes :
+
+“w” – Opens a file for write only. If file not exist then new file is created and if file already exists then contents of file is erased.
+“r” – File is opened for read only.
+“a” – File is opened for write only. File pointer points to end of file. Existing data in file is preserved.
+“w+” – Opens file for read and write. If file not exist then new file is created and if file already exists then contents of file is erased.
+“r+” – File is opened for read/write.
+“a+” – File is opened for write/read. File pointer points to end of file. Existing data in file is preserved. If file is not there then new file is created.
+“x” – New file is created for write only.
+
+
+Difference between readfile() and fopen()?
+First, readfile() does a number of things that fread() does not. readfile() opens the file for reading, reads it, and then prints it to the output buffer all in one go. fread() only does one of those things: it reads bytes from a given file handle.
+Additionally, readfile() has some benefits that fread() does not. For example, it can take advantage of memory-mapped I/O where available rather than slower disk reads. This significantly increases the performance of reading the file since it delegates the process away from PHP itself and more towards operating system calls.
+
+fwrite()
+The fwrite() writes to an open file.
+
+fclose()
+The fclose() function in PHP is an inbuilt function which is used to close a file which is pointed by an open file pointer. The fclose() function returns true on success and false on failure. It takes the file as an argument which has to be closed and closes that file.
+
+die()
+The die() is an inbuilt function in PHP. It is used to print message and exit from the current php script. It is equivalent to exit() function in PHP.
+
+-- x-- 
+
+Difference between mb_strlen() and strlen() ?
+If you are dealing with an ASCII string, both strlen and mb_strlen returns the same value. But when you want to find the number of characters in a multi-byte string, strlen will incorrectly return the number of bytes in string. Whereas mb_strlen will return the number of characters.
+
+
+
+-- x--
+
+PHP Connect to MySQL
+PDO will work on 12 different database systems, whereas MySQLi will only work with MySQL databases.
+Both are object-oriented, but MySQLi also offers a procedural API. 
+So, if you have to switch your project to use another database, PDO makes the process easy. You only have to change the connection string and a few queries. With MySQLi, you will need to rewrite the entire code - queries included.
+
+Ways of connecting to db -->
+MySQLi (object-oriented)
+MySQLi (procedural)
+PDO
+
+A prepared statement is a feature used to execute the same (or similar) SQL statements repeatedly with high efficiency.
+
+Prepared statements basically work like this:
+
+Prepare: An SQL statement template is created and sent to the database. Certain values are left unspecified, called parameters (labeled "?"). Example: INSERT INTO MyGuests VALUES(?, ?, ?)
+The database parses, compiles, and performs query optimization on the SQL statement template, and stores the result without executing it
+Execute: At a later time, the application binds the values to the parameters, and the database executes the statement. The application may execute the statement as many times as it wants with different values
+
+Compared to executing SQL statements directly, prepared statements have three main advantages:
+
+Prepared statements reduce parsing time as the preparation on the query is done only once (although the statement is executed multiple times)
+Bound parameters minimize bandwidth to the server as you need send only the parameters each time, and not the whole query
+Prepared statements are very useful against SQL injections, because parameter values, which are transmitted later using a different protocol, need not be correctly escaped. If the original statement template is not derived from external input, SQL injection cannot occur.
+
+Bind_Param
+This function binds the parameters to the SQL query and tells the database what the parameters are. The "sss" argument lists the types of data that the parameters are. The s character tells mysql that the parameter is a string.
+
+
+i - integer
+d - double
+s - string
+b - BLOB
+
+
+
+--- x ---
+
+HTML Injection 
+HTML Injection also known as Cross Site Scripting. It is a security vulnerability that allows an attacker to inject HTML code into web pages that are viewed by other users.
+
+SQL Injection
+SQL injection is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database.
+
+
+
+--- x ----
+
+AJAX
+
+AJAX is about updating parts of a web page, without reloading the whole page.
+AJAX stands for  Asynchronous JavaScript and XML.
+
+
+AJAX is a technique for creating fast and dynamic web pages.
+
+AJAX allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes. 
+This means that it is possible to update parts of a web page, without reloading the whole page.
+
+AJAX is used to create more interactive applications.

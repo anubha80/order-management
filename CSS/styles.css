@@ -1,0 +1,412 @@
+/* 
+// REVISION HISTORY
+
+
+// DEVELOPER                      DATE                        COMMENTS
+// Anubha Dubey(2032178)          2022-02-26            Add style properties for index and buy page
+// Anubha Dubey(2032178)          2022-02-28            Add style properties for confirmation page
+// Anubha Dubey(2032178)          2022-02-28            Fix margin for order-confirmation 
+// Anubha Dubey(2032178)          2022-02-29            Add red boundary style for bestseller product
+// Anubha Dubey(2032178)          2022-03-03            Add style for table of total orders
+// Anubha Dubey(2032178)          2022-03-03            Add style and animation for cheat sheet button
+// Anubha Dubey(2032178)          2022-03-05            Add classes for font color red orange white green
+// Anubha Dubey(2032178)          2022-04-18            Add style for account page
+
+*/
+
+
+body {
+    background-color: #E3BEC6;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Times, serif;
+    margin: 0;
+    text-align: center;
+}
+.container-main-nav{
+    width: 100%;
+    background-color: #EFDAD7;
+    height: 130px;
+}
+.logo{
+    position: relative;
+    float: left;
+    width: 100px;
+    margin: 15px;
+    padding: 0;
+}
+
+
+.navigation a{
+    position: relative;
+    float: left;
+    color: #EA5C2B;
+    padding: 2%;
+    font-weight: bolder;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.company-container{
+    position: relative;
+    width: 100%;
+    float: left;
+}
+.company-name{
+    font-size: 3rem;
+    
+}
+.company-slogan{
+    font-size: 1.5rem;
+}
+.company-name, .company-detail, .company-slogan{
+    margin-left: 10px;
+}
+.company-detail{
+    line-height: 25px;
+}
+.product-img{
+    width: 150px;
+    padding: 2%;
+    border: solid black 2px;
+    background-color: #EFDAD7;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.bestseller-img{        
+    border: 5px solid red;
+    width: 300px;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #EFDAD7; 
+}
+
+.bestselling-heading{
+    margin-bottom: 0%;
+}
+.bestselling-prod-name{
+    margin-bottom: 1%;
+}
+.navigation a:hover{
+/*    background-color: #2F3A8F;*/
+}
+
+.copyright{
+    color: grey;
+    letter-spacing: 3px;
+}
+.form-container{
+    padding: 3%;
+    margin: auto;
+    width: 50%;
+    height: auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Times, serif;
+}
+
+.form-heading{
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.form-field{
+    background-color: #EFDAD7;
+    text-align:left;
+    padding: 1%;
+    font-size: large;
+}
+.submit-btn, .reset-btn, .btn-logout{
+    margin-top: 10px;
+    padding: 1%;
+    width: 20%;
+    background-color: #EA5C2B;
+    border-radius: 5px;
+    border: none;
+    font-size: larger;
+}
+.mandatory-field{
+    color: red;
+    font-weight: bolder;
+}
+.buy-form input{
+    border-radius: 7px;
+    border: none;
+    height: 5%;
+    width: 30%;
+    margin-left: 3%;
+}
+.form-buttons{
+    margin-top: 25px;
+}
+.buy-form label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 40%;
+    /* width: 250px; */
+    text-align: right;
+}
+.comment-textarea{
+    border-radius: 7px;
+    border: none;
+    margin-left: 3%;
+}
+.validationError{
+    color: red;
+    font-size: small;
+}
+.order-confirmation{
+    margin-top: 100px ;
+    margin-bottom: 400px;
+}
+
+table{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    border-collapse:collapse;
+    font-size: medium;
+    margin-bottom: 10%;
+    text-align: left;
+}
+.orders-container{
+    margin-top: 2%;
+}
+table,th,td{
+    color: #EA5C2B;
+    border: 2px solid black;
+    background-color: #EFDAD7;
+}
+th{
+    font-size: 1.2rem;
+    color: #2F3A8F;
+    background-color: #EA5C2B;
+    padding: 1% 1% 1% 0.5%;
+    
+}
+td{
+    padding: 0.2%;
+}
+.order-status{
+    color: #2F3A8F;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5%;
+}
+.orders-list{
+    color: #2F3A8F;
+    margin-top: 5%;
+    margin-left: 50px;
+}
+.cheat-sheet-link{
+    float: right;
+    margin-top: 20px;
+    margin-right:10px;
+    text-decoration: none;
+    color: white;
+    background-color: #2F3A8F;
+    padding : 1%;
+    border-radius: 5px;
+}
+.cheat-sheet-link {
+      animation: mover 0.3s infinite  alternate;
+  }
+  @keyframes mover {
+      100% { transform: translateY(-5px); }
+  }
+
+.white {
+    background-color: white;
+}
+.green{
+    color: green;
+    background-color: white;
+}
+.orange{
+    color: orange;
+    background-color: white;
+}
+.red{
+    color: red;
+    background-color: white;
+}
+
+/*.btn-logout{
+    background: #c728c4;
+    background-image: -webkit-linear-gradient(top, #c728c4, #e077cb);
+    background-image: -moz-linear-gradient(top, #c728c4, #e077cb);
+    background-image: -ms-linear-gradient(top, #c728c4, #e077cb);
+    background-image: -o-linear-gradient(top, #c728c4, #e077cb);
+    background-image: linear-gradient(to bottom, #c728c4, #e077cb);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn-logout:hover {
+  background: #d42663;
+  text-decoration: none;
+}*/
+.logout-btn-container{
+    padding: 20px;
+}
+
+.link-register{
+    color: black;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    background-color: lightseagreen;
+    padding: 15px;
+    border-radius: 5px;
+}
+.link-register:hover{
+    background-color: gold;
+}
+.register-link-container{
+    margin-top: 20px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+a:hover, button:hover{
+    cursor: pointer;
+}
+
+/* ACCOUNT page */
+
+.account-head{
+    margin: auto;
+    width:50%;
+}
+/*.login-container{
+    padding:2%;
+    margin: auto;
+    width:40%;
+    border: 2px solid black;
+}
+
+.login-form input{
+    all:none;
+}
+
+.login-form label{
+    all: none;
+    margin-right: -160px;
+    font-size: 20px;
+}
+
+.login-btn{
+    width:30%;
+    background-color: #EA5C2B;
+    color:white;
+    font-size: 20px;
+    cursor: pointer;
+}*/
+
+
+/* LOGIN */
+
+.login-container{
+    position: absolute;
+    float: right;
+    top: 0%;
+    right: 0%;
+    width: 20%;
+    height: 10%;
+    background-color: #EFDAD7;
+}
+.login-btn, .logout-btn{
+    width:40%;
+    padding:1%;
+    background-color: #2F3A8F;
+    color: white;
+    border-radius: 5px;
+    
+}
+.final-msg p{
+    font-size: 30px;
+    color: #2F3A8F;
+    padding: 2%;
+}
+
+.err-duplicate-user{
+    padding:1%;
+    background-color: white;
+}
+
+
+
+/* BUY */
+
+.product-option{
+    margin-left: 3%;
+    width:30%;
+    height:5%;
+    border-radius: 5px;
+    background-color: white;
+}
+
+
+/* ORDERS */
+
+.order-date{
+    text-align: center;
+    margin-left: 4%;
+    width:30%;
+    height:5%;
+    padding-top: 10px; 
+}
+
+.order{
+    padding: 5%;
+    border-radius: 5px;
+}
+
+
+/* ACCOUNT */
+
+.account input{
+    width:30%;
+    height:5%;
+    border-radius: 5px;
+    border:none;
+}
+
+/* ERROR */
+
+.error{
+    padding: 1%;
+    width:100%;
+    font-size:25px;
+    color:red;
+    background-color: #EFDAD7;
+    margin-bottom: 0%;
+}
+
+/* WElcome message on nav */
+
+.welcome{
+    color: #2F3A8F;
+    font-size: 20px;
+    margin-bottom: 0%;
+}
+
+.welcome-image{
+    position:absolute;
+    top: 2%;
+    float:right;
+    right:20%;
+    height: 60px;
+}
+
+
+/* BUY */
+
+
+.prod-dropdown{
+    background-color: goldenrod;
+    color: black;
+}
